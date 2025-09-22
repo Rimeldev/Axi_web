@@ -112,14 +112,17 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="bg-[#D9D9D96B] mt-14 w-full relative ">
-         <div className="absolute inset-0 bg-[url('/src/assets/image/style2.png')] bg-no-repeat bg-center opacity-20 pointer-events-none z-0 bg-[length:350px]"></div>
-        <div className="flex items-center justify-between py-4 px-16 gap-4">
-          <div className="flex-1 text-left max-w-md">
-            <h2 className="text-black text-5xl font-heading font-bold mb-8 leading-tight">
+      <div className="bg-[#D9D9D96B] mt-14 w-full relative">
+        {/* Image de fond */}
+        <div className="absolute inset-0 bg-[url('/src/assets/image/style2.png')] bg-no-repeat bg-center opacity-20 pointer-events-none z-0 bg-[length:250px] md:bg-[length:350px]"></div>
+
+        <div className="flex flex-col md:flex-row items-center justify-between py-8 px-6 md:px-16 gap-10 relative z-10">
+          {/* Texte */}
+          <div className="flex-1 text-left max-w-full md:max-w-md">
+            <h2 className="text-black text-3xl md:text-5xl font-heading font-bold mb-6 leading-snug md:leading-tight">
               Pourquoi <span className="text-[#E8B51E]">Axì</span> ?
             </h2>
-            <p className="text-black font-poppins text-lg leading-relaxed mb-8 text-left">
+            <p className="text-black font-poppins text-base md:text-lg leading-relaxed mb-6 text-left">
               Nous croyons que chaque petite entreprise mérite d'être
               découverte. Axì donne aux entrepreneurs les moyens de créer une
               présence numérique impressionnante tout en aidant les clients à
@@ -127,59 +130,69 @@ export default function Home() {
               restaurants familiaux aux salons de beauté, nous construisons des
               ponts entre les entreprises et leurs communautés.
             </p>
-            <div className="bg-[#2F2F2F21] border-l-4 border-[#E8B51E] py-4 px-4 rounded-r-lg shadow-sm mb-6">
-              <p className="font-poppins font-bold italic">
+            <div className="bg-[#2F2F2F21] border-l-4 border-[#E8B51E] py-3 px-4 rounded-r-lg shadow-sm mb-6">
+              <p className="font-poppins font-bold italic text-sm md:text-base">
                 “ Les petites entreprises sont le cœur de nos communautés. Axì
                 amplifie ce cœur, le faisant entendre par tous ceux qui en ont
                 besoin.”
               </p>
             </div>
           </div>
+
+          {/* Image */}
           <div className="flex-1 flex justify-center items-center">
             <img
               src={smart}
               alt="Smart"
-              className=" w-full max-w-[460px] h-auto hover:scale-105 transition-transform duration-300"
+              className="w-full max-w-[300px] md:max-w-[460px] h-auto hover:scale-105 transition-transform duration-300"
             />
           </div>
         </div>
       </div>
-      <div className="breakout">
-        <div className="bg-[#E8B51E] p-16 rounded-2xl mt-8 relative">
-        <div className="absolute inset-0 bg-[url('/src/assets/image/style2.png')] bg-no-repeat bg-center opacity-30 pointer-events-none z-0"></div>
-          <h2 className="text-black text-4xl text-center font-heading font-bold mb-8 leading-tight">
-            Commencez à développer votre entreprise avec{" "}
-            <span className="text-white">Axì</span> <br />
-            aujourd'hui.
-          </h2>
-          <p className="text-black font-poppins text-lg leading-relaxed mb-14 text-center">
-            Rejoignez des milliers d'entrepreneurs qui utilisent déjà Axì pour
-            présenter <br />
-            leurs services, se connecter avec des clients et augmenter leur
-            visibilité.
-          </p>
 
-          <div className="flex gap-5 justify-center mx-auto mb-8">
-            <Button
-              title={
-                <div className="flex flex-col items-start">
-                  Télécharger pour <br />
-                  <strong>iOS</strong>
-                </div>
-              }
-              icon={ios}
-            />
-            <Button
-              title={
-                <div className="flex flex-col items-start">
-                  Télécharger pour <br />
-                  <strong>Android</strong>
-                </div>
-              }
-              icon={android}
-            />
+      <div className="breakout">
+        <div className="bg-[#E8B51E] p-6 md:p-16 rounded-2xl mt-8 relative text-center">
+          {/* Image de fond */}
+          <div className="absolute inset-0 bg-[url('/src/assets/image/style2.png')] bg-no-repeat bg-center opacity-30 pointer-events-none z-0"></div>
+
+          {/* Contenu */}
+          <div className="relative z-10">
+            <h2 className="text-black text-2xl md:text-4xl font-heading font-bold mb-6 md:mb-8 leading-snug md:leading-tight">
+              Commencez à développer votre entreprise avec{" "}
+              <span className="text-white">Axì</span>{" "}
+              <br className="hidden md:block" />
+              aujourd'hui.
+            </h2>
+            <p className="text-black font-poppins text-sm md:text-lg leading-relaxed mb-8 md:mb-14">
+              Rejoignez des milliers d'entrepreneurs qui utilisent déjà Axì pour
+              présenter leurs services, se connecter avec des clients et
+              augmenter leur visibilité.
+            </p>
+
+            {/* Boutons */}
+            <div className="flex flex-col md:flex-row gap-4 md:gap-5 justify-center items-center md:items-start mx-auto mb-6 md:mb-8">
+              <Button
+                title={
+                  <div className="flex flex-col items-center md:items-start">
+                    Télécharger pour <br />
+                    <strong>iOS</strong>
+                  </div>
+                }
+                icon={ios}
+              />
+              <Button
+                title={
+                  <div className="flex flex-col items-center md:items-start">
+                    Télécharger pour <br />
+                    <strong>Android</strong>
+                  </div>
+                }
+                icon={android}
+              />
+            </div>
           </div>
         </div>
+
         <div className="justify-center mt-20">
           <h2 className="text-black text-4xl text-center font-heading font-bold mb-5 leading-tight">
             Ce que dit notre communauté
@@ -188,7 +201,7 @@ export default function Home() {
             Vraies histoires d'entrepreneurs qui développent leur entreprise
             avec Axì.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-left font-poppins">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left font-poppins">
             {avis.map((avis) => (
               <Aviscard key={avis.id} {...avis} />
             ))}
@@ -196,7 +209,7 @@ export default function Home() {
         </div>
       </div>
       <div className="relative justify-center mt-20 py-16 bg-[#E8B51E]">
-         <div className="absolute inset-0 bg-[url('/src/assets/image/style2.png')] bg-no-repeat bg-center opacity-20 pointer-events-none z-0"></div>
+        <div className="absolute inset-0 bg-[url('/src/assets/image/style2.png')] bg-no-repeat bg-center opacity-20 pointer-events-none z-0"></div>
         <h2 className="text-black text-4xl text-center font-heading font-bold mb-5 leading-tight">
           Notre équipe
         </h2>
@@ -207,7 +220,7 @@ export default function Home() {
         </p>
         {/* <Carousel /> */}
         <div>
-          <Teamcard/>
+          <Teamcard />
         </div>
       </div>
       <div>

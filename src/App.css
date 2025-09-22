@@ -6,6 +6,23 @@
    text-align: center;
 }
 
+/* Tablette */
+@media (max-width: 1024px) {
+  .breakout {
+    max-width: 900px;
+    padding: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .breakout {
+    max-width: 100%;
+    padding: 0.5rem 1rem;
+    text-align: left; /* ou center si tu préfères */
+  }
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

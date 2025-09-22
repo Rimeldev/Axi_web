@@ -1,8 +1,44 @@
 .img {
-  height: 400px;         /* hauteur plus grande (debout) */
-  width: 300px;          /* largeur plus petite que la hauteur */
-  object-fit: cover;     /* conserve le cadrage */
-  border-radius: 10px;   /* optionnel : arrondir les coins */
+  height: 400px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Style par défaut des flèches */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #E8B51E;        /* ta couleur de marque */
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #000;           /* changement au survol */
+}
+
+/* Positionnement responsive */
+@media (max-width: 640px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    scale: 0.7;          /* plus petites sur mobile */
+  }
+}
+
+
+@media (max-width: 640px) {
+  .img {
+    height: 160px;   /* plus petit sur mobile */
+    width: 100px;    /* largeur réduite */
+  }
+}
+
+@media (max-width: 1024px) {
+  .img {
+    height: 300px;   /* tablette */
+    width: 200px;
+  }
 }
 
 .swiper {
